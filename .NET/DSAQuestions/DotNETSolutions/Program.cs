@@ -1,4 +1,5 @@
 ﻿using System;
+using DotNETSolutions.SolutionFiles;
 
 namespace DotNETSolutions
 {
@@ -6,7 +7,7 @@ namespace DotNETSolutions
   {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Hello, World!");
+      // Copy the cases at the end of each file and paste here and execute.
     }
   }
 }
