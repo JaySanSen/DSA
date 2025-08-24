@@ -20,11 +20,10 @@ public class MergeStringAlternatively {
         merged: a p b q   r   s
 
         Example 3:
-
         Input: word1 = "abcd", word2 = "pq"
         Output: "apbqcd"
         Explanation: Notice that as word1 is longer, "cd" is appended to the end.
-                word1:  a   b   c   d
+        word1:  a   b   c  d
         word2:    p   q
         merged: a p b q c  d
 
