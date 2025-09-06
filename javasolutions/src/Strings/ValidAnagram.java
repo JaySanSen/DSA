@@ -1,6 +1,5 @@
 package Strings;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 //Example 1:
