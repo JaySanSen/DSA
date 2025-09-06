@@ -32,21 +32,17 @@ public class ValidPalindrome {
         if (s.isBlank() || s.isEmpty()) {
             return true;
         }
+        StringBuilder originalString = new StringBuilder();
         for (char a : s.toCharArray()) {
-            if (!Character.isLetterOrDigit(a)) {
-                s = s.replace(String.valueOf(a), "");
+            if (Character.isLetterOrDigit(a)) {
+                originalString.append(a);
             }
         }
-        StringBuilder stringBuilder = new StringBuilder(s);
+        StringBuilder stringBuilder = new StringBuilder(originalString);
         String reverseString = stringBuilder.reverse().toString();
-        if (reverseString.equals(s))
+        if (reverseString.contentEquals(originalString))
             return true;
         return false;
     }
 
 }
-// for (int i = 0; i < (s.length() / 2); i++) {
-// if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
-// return false;
-// }
-// }
