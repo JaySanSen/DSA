@@ -28,22 +28,25 @@ Constraints:
 */
 public class ValidPalindrome {
     public boolean isPalindrome(String s) {
+        s = s.toLowerCase();
+        if (s.isBlank() || s.isEmpty()) {
+            return true;
+        }
         for (char a : s.toCharArray()) {
             if (!Character.isLetterOrDigit(a)) {
                 s = s.replace(String.valueOf(a), "");
             }
         }
-        System.out.println(s.length());
-        System.out.println(s);
-        s = s.toLowerCase();
-        int stringLength = (s.length() % 2 == 0) ? (s.length()/2) + 1  : s.length() / 2;
-        for (int i = 0; i < stringLength; i++) {
-            if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
-                System.out.println(s.charAt(i) + " == " + s.charAt(s.length() - i));
-                return false;
-            }
-        }
-        return true;
+        StringBuilder stringBuilder = new StringBuilder(s);
+        String reverseString = stringBuilder.reverse().toString();
+        if (reverseString.equals(s))
+            return true;
+        return false;
     }
 
 }
+// for (int i = 0; i < (s.length() / 2); i++) {
+// if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
+// return false;
+// }
+// }
