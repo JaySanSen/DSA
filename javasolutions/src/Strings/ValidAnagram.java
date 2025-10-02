@@ -17,14 +17,14 @@ public class ValidAnagram {
     if(s.length() != t.length()){
       return false;
     }
-    int[] arr = new int[26];
+    int[] sampleArr = new int[26];
     for (char a : s.toCharArray()) {
-      arr[a - 'a'] += 1;
+      sampleArr[a - 'a'] += 1;
     }
     for (char a : t.toCharArray()) {
-      arr[a - 'a'] -= 1;
+      sampleArr[a - 'a'] -= 1;
     }
-    for (int a : arr) {
+    for (int a : sampleArr) {
       if (a != 0) {
         return false;
       }
